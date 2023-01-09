@@ -1,5 +1,4 @@
-# Subject
-<br>
+# Subject<br>
 Assignment name  : mini_serv<br>
 Expected files   : mini_serv.c<br>
 Allowed functions: write, close, select, socket, accept, listen, send, recv, bind, strstr, malloc, realloc, free, calloc, bzero, atoi, sprintf, strlen, exit, strcpy, strcat, memset<br>
@@ -24,7 +23,7 @@ When a client connect to the server:<br>
 - %d will be replace by this number<br>
 - a message is sent to all the client that was connected to the server: "server: client %d just arrived\n"<br>
 <br>
-clients must be able to send messages to your program.<br>
+Clients must be able to send messages to your program.<br>
 - message will only be printable characters, no need to check<br>
 - a single message can contains multiple \n<br>
 - when the server receive a message, it must resend it to all the other client with "client %d: " before every line!<br>
