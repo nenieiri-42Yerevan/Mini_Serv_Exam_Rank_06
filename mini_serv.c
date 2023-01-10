@@ -6,7 +6,7 @@
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 14:45:12 by vismaily          #+#    #+#             */
-/*   Updated: 2023/01/09 20:09:18 by vismaily         ###   ########.fr       */
+/*   Updated: 2023/01/10 13:47:10 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ typedef struct s_client
 
 t_client	*clients = NULL;
 fd_set		current, read_set, write_set;
-int			sockfd, g_id = 0;
+int			sockfd, g_id;
 char		msg[200000], buff[200000];
 
 void	fatal()
