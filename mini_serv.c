@@ -6,7 +6,7 @@
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 14:45:12 by vismaily          #+#    #+#             */
-/*   Updated: 2023/01/12 15:27:50 by vismaily         ###   ########.fr       */
+/*   Updated: 2023/01/12 16:52:32 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int	get_id(int fd)
 			return (tmp->id);
 		tmp = tmp->next;
 	}
-	return (-1);
+	return (-10);
 }
 
 void	send_to_all(int fd)
