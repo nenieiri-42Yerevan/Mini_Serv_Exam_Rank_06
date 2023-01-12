@@ -6,7 +6,7 @@
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 14:45:12 by vismaily          #+#    #+#             */
-/*   Updated: 2023/01/10 13:47:10 by vismaily         ###   ########.fr       */
+/*   Updated: 2023/01/12 15:27:50 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,19 +144,19 @@ void	extract_msg(int fd)
 {
 	char	tmp[200000];
 	int		i = -1;
-	int		j = 0;
+	int		j = -1;
 
 	bzero(&tmp, sizeof(tmp));
 	while (msg[++i] != 0)
 	{
-		tmp[j++] = msg[i];
+		tmp[++j] = msg[i];
 		if (msg[i] == '\n')
 		{
 			bzero(&buff, sizeof(buff));
 			sprintf(buff, "client %d: %s", get_id(fd), tmp);
 			send_to_all(fd);
 			bzero(&tmp, sizeof(tmp));
-			j = 0;
+			j = -1;
 		}
 	}
 	bzero(&msg, sizeof(msg));
