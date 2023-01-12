@@ -6,7 +6,7 @@
 /*   By: vismaily <nenie_iri@mail.ru>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 14:45:12 by vismaily          #+#    #+#             */
-/*   Updated: 2023/01/12 16:52:32 by vismaily         ###   ########.fr       */
+/*   Updated: 2023/01/12 19:49:51 by vismaily         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -191,7 +191,7 @@ int	main(int argc, char **argv)
 	while (1)
 	{
 		read_set = write_set = current;
-		if (select(get_max_fd() + 1, &read_set, &write_set, NULL, NULL) < 0)
+		if (select(get_max_fd() + 1, &read_set, &write_set, NULL, NULL) == -1)
 			continue ;
 		for (int fd = 0; fd <= get_max_fd(); ++fd)
 		{
