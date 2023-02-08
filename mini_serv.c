@@ -29,7 +29,7 @@ typedef struct s_client
 t_client	*clients = NULL;
 fd_set		current, read_set, write_set;
 int			sockfd, g_id;
-char		msg[200000], buff[200000];
+char		msg[200000], buff[200040];
 
 void	fatal()
 {
